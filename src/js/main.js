@@ -46,3 +46,56 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 
 handleScroll();
+
+
+const slides = document.querySelectorAll(".slide");
+
+const previousButton =
+    document.getElementById("previous-slide");
+
+const nextButton =
+    document.getElementById("next-slide");
+
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+}
+
+nextButton.addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+});
+
+previousButton.addEventListener("click", () => {
+    currentSlide =
+        (currentSlide - 1 + slides.length) % slides.length;
+
+    showSlide(currentSlide);
+});
+
+const modal = document.getElementById("modal");
+
+const openModalButton =
+    document.getElementById("open-modal");
+
+const closeModalButton =
+    document.getElementById("close-modal");
+
+openModalButton.addEventListener("click", () => {
+    modal.classList.add("visible");
+});
+
+closeModalButton.addEventListener("click", () => {
+    modal.classList.remove("visible");
+});
+
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.classList.remove("visible");
+    }
+});

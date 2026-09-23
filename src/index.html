@@ -16,8 +16,8 @@
 
                     <ul class="nav-links">
                         <li> <a href="#home" class="nav-link active">Home</a></li>
-                        <li> <a href="#about" class="nav-link">Home</a></li>
-                        <li> <a href="#projects" class="nav-link">Projects</a></li>
+                        <li> <a href="#about" class="nav-link">About</a></li>
+                        <li> <a href="#projects" class="nav-link">Experience</a></li>
                         <li> <a href="#gallery" class="nav-link">Gallery</a></li>
                         <li> <a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
@@ -43,38 +43,118 @@
             </section>
             <section id="projects" class="section projects">
                 <div class="section-content">
-                    <h2>Projiects</h2>
+                    <h2>Experience</h2>
                     
                     <div class="project-grid">
                         <article class="project-card">
-                            <h3>Project One</h3>
-                            <p> description </p>
+                            <h3>TSMC Software Engineering InternJun</h3>
+                            <p> Built and shipped backend APIs powering the real-time production-monitoring platform used by 200+ fab engineers to track semiconductor manufacturing status.
+Re-architected the wafer auto-transfer system from phase- to Giga-fab-scale, adding multi-database integration and parallel query execution to cut query latency </p>
                         </article>
                         <article class="project-card">
-                            <h3>Project Two</h3>
-                            <p> description </p>
+                            <h3>91APP Software Engineering Intern</h3>
+                            <p> Built a Transformer-based real-time user-action recommendation model (Pinterest TransAct architecture) in Python and PyTorch over 1M user events, improving CTR by 30% over the production baseline in the company’s mock environment.
+Shipped the model into 91APP's live recommendation system on a compressed 4-week timeline, serving 30+ brands. </p>
                         </article>
                         <article class="project-card">
-                            <h3>Project Three</h3>
-                            <p> description </p>
+                            <h3>iKala </h3>
+                            <p> Designed and deployed LLM agents for the company’s fake news alert feature, applied few-shot and chain-of-thought prompting
+Benchmarked 5 prompting and fine-tuning strategies across 7 internal tasks, producing the prompt-design guidelines adopted by 3 product teams. </p>
                         </article>
+                </div>
+            </section>
+
+            <section class="section background-section">
+                <div class="section-content">
+                    <h2>Building Technology That Matters</h2>
+                    <p>
+                        I enjoy working on software and machine learning systems
+                        that solve real-world problems.
+                    </p>
                 </div>
             </section>
 
             <section id="gallery" class="section gallery">
                 <div class="section-content">
                     <h2>Gallery</h2>
-                    <img src="assets/image.jpg" alt="gallery image">
+
+                    <div class="carousel">
+
+                        <button id="previous-slide" class="carousel-button previous" aria-label="Previous slide">
+                            &#10094;
+                        </button>
+
+                        <div class="slides">
+                            <div class="slide active">
+                                <img src="assets/2.jpg" alt="Slide 1">
+                            </div>
+
+                            <div class="slide">
+                                <img src="assets/3.jpg" alt="Slide 1">
+                            </div>
+
+                            <div class="slide">
+                                <img src="assets/4.jpg" alt="Slide 1">
+                            </div>
+                        </div>
+
+                        <button id="next-slide" class="carousel-button next" aria-label="Next slide">
+                            &#10095;
+                        </button>
+
+                    </div>
                 </div>
             </section>
+            <section id="video" class="section video-section">
+                <div class="section-content">
+                    <h2>Video</h2>
 
+                    <p>
+                        Here is a short video.
+                    </p>
+
+                    <video controls>
+                        <source
+                            src="assets/random.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
             <section id="contact" class="section contact">
                 <div class="section-content">
                     <h2>Contact</h2>
-                    <p>thank you for visiting my page</p>
+
+                    <p>Want to learn more?</p>
+
+                    <button id="open-modal" class="button">
+                        Contact Me
+                    </button>
                 </div>
             </section>
         </main>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+
+                <button
+                    id="close-modal"
+                    class="modal-close"
+                    aria-label="Close modal"
+                >
+                    &times;
+                </button>
+
+                <h2>Let's Connect</h2>
+
+                <p>
+                    Thanks for checking out my portfolio.
+                </p>
+
+            </div>
+        </div>
 
         <footer>
             <p>&copy; 20226Joshua</p>
