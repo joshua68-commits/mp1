@@ -1,1 +1,135 @@
 /* Your SCSS here. */
+$primary-color: #255bcf;
+$dark-color: #121825;
+$light-color: #e7eaec;
+$text-color: #2f3744;
+$max-width: 1200px;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: $text-color;
+}
+
+.section {
+    width: 100%;
+    padding: 100px 20px;
+}
+
+.section-content {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: $dark-color;
+
+    .nav-container {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 30px 20px;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color:white;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover,
+            &.active {
+                color: white;
+            }
+        }
+    }
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3e4fc;
+
+    h1{
+        font-size: 5rem;
+        margin-bottom:10px;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+}
+
+.about {
+    background-color: white;
+}
+
+.projects {
+    background-color: $light-color;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    padding:30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.gallery {
+    background-color: white;
+
+    img {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+.contact {
+    background-color: white;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: $dark-color;
+    color:white
+}
